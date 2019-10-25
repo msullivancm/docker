@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<!-- saved from url=(0062)https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html -->
+<html lang="en" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" class="js" style=""><script type="text/javascript" async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/analytics.js"></script><script type="text/javascript" async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/js"></script><script id="twitter-wjs" src="./Deploying using Docker Compose _ Alfresco Documentation_files/widgets.js"></script><script async="" id="demandbase_js_lib" src="./Deploying using Docker Compose _ Alfresco Documentation_files/tgRGNEYN.min.js"></script><script type="text/javascript" async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/insight.min.js"></script><script type="text/javascript" async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/hotjar-474629.js"></script><script type="text/javascript" async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/analytics.js"></script><script src="./Deploying using Docker Compose _ Alfresco Documentation_files/gtm.js" type="text/javascript" async=""></script><script src="./Deploying using Docker Compose _ Alfresco Documentation_files/form.js"></script><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/prompt.js"></script><script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/page/runScript.js"></script><head profile="http://www.w3.org/1999/xhtml/vocab"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+  
+<link rel="up" href="https://docs.alfresco.com/6.0/concepts/deploy-overview.html">
+<link rel="next" href="https://docs.alfresco.com/6.0/tasks/docker-system-startup.html">
+<link rel="shortcut icon" href="https://docs.alfresco.com/sites/docs.alfresco.com/themes/custom/alfrescodocs_bootstrap/favicon.ico" type="image/vnd.microsoft.icon">
+<script>dataLayer = [{"entityType":"node","entityBundle":"documentation_page","entityId":"2220767","entityLabel":"Deploying using Docker Compose","entityLanguage":"und","entityTnid":"0","entityVid":"6640436","entityName":"anxumalo","entityUid":"2170","entityCreated":"1571910459","entityStatus":"1","drupalLanguage":"en","userUid":0}];</script>
+<link rel="prev" href="https://docs.alfresco.com/6.0/tasks/deploy-helm-minikube.html">
+<link rel="shortlink" href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="dns-prefetch" href="https://docs.alfresco.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://docs.alfresco.com/opensearch.xml" title="Alfresco Documentation">
+<link rel="canonical" href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html">
+  <title>Deploying using Docker Compose | Alfresco Documentation</title>
+  <link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_LmzbtH4nS32yBul4s5wsECdBIov7EeNQs3gscpsLWbc.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_LGqj4IjuMXIdvFzbh7nQ_BqmzinX5tCnaZvA92dMU08.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_f1lM9rPJ9CNnEb1W_FAuwKMN-JIylntLTUVm9vS-sJQ.css" media="all">
+<style>#sliding-popup.sliding-popup-bottom{background:#f9f9f9;}#sliding-popup .popup-content #popup-text h1,#sliding-popup .popup-content #popup-text h2,#sliding-popup .popup-content #popup-text h3,#sliding-popup .popup-content #popup-text p{color:#727174 !important;}
+</style>
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_gMqOx7eZGnmULkFitTxxJag-ApzFh2lqmml8xFkhJq8.css" media="all">
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_vQCl6LSmWxksO8RUtVsBMOWKzjLiaZ-BZUO5fu3WD14.css" media="only screen and (min-width: 992px)">
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css_zxzsyn5MqxsSuo_u9ydxVRVkRunJf3rqlMtxpK7ws0g.css" media="only screen and (max-width: 768px)">
+<link type="text/css" rel="stylesheet" href="./Deploying using Docker Compose _ Alfresco Documentation_files/css" media="all">
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4HV22" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script src="./Deploying using Docker Compose _ Alfresco Documentation_files/jquery.min.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/jquery.once.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/drupal.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/jquery.cookie.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/fitvids.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/datalayer.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/munchkin.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/forms2.min.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/marketo-loadForm.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/alfresco.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/wufoo1.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/retina-1.1.0.min.js"></script>
+<script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"alfrescodocs_bootstrap","theme_token":"YiaO8pLog7TBZ19a0bNU5lxT3QIS3VbgaWCSFQotoy4","js":{"0":1,"sites\/docs.alfresco.com\/modules\/contrib\/eu_cookie_compliance\/js\/eu_cookie_compliance.js":1,"sites\/docs.alfresco.com\/themes\/contrib\/bootstrap\/js\/bootstrap.js":1,"sites\/docs.alfresco.com\/modules\/contrib\/jquery_update\/replace\/jquery\/1.7\/jquery.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/docs.alfresco.com\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/docs.alfresco.com\/modules\/contrib\/fitvids\/fitvids.js":1,"sites\/docs.alfresco.com\/modules\/contrib\/datalayer\/datalayer.js":1,"\/\/munchkin.marketo.net\/munchkin.js":1,"\/\/app-ab05.marketo.com\/js\/forms2\/js\/forms2.min.js":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/js\/marketo-loadForm.js":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/js\/alfresco.js":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/js\/wufoo1.js":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/js\/retina-1.1.0.min.js":1},"css":{"modules\/system\/system.base.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/ldap\/ldap_user\/ldap_user.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/date\/date_api\/date.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/date\/date_popup\/themes\/datepicker.1.7.css":1,"modules\/field\/theme\/field.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/fitvids\/fitvids.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/views\/css\/views.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/ckeditor\/css\/ckeditor.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/ldap\/ldap_servers\/ldap_servers.admin.css":1,"sites\/docs.alfresco.com\/modules\/contrib\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"0":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/bootstrap.min.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/style.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/typography.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/utils.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/module-header.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/marketo-form.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/992.css":1,"sites\/docs.alfresco.com\/themes\/custom\/alfrescodocs_bootstrap\/css\/768.css":1,"\/\/fonts.googleapis.com\/css?family=Open+Sans:400,600":1}},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":0,"popup_scrolling_confirmation":0,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EWe use cookies on our websites to enhance your web experience.\u003C\/h2\u003E\u003Cp\u003EBy using this site, you are agreeing with Alfresco Cookie Policy. We\u0027ll assume that you are happy to receive all cookies on this website. However, you can change your cookie settings at any time.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003EFind out more\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","use_mobile_message":false,"mobile_popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n          \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK, I agree\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003EFind out more\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","mobile_breakpoint":"768","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n              \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022 \u003EMore info\u003C\/button\u003E\n          \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_use_bare_css":false,"popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.alfresco.com\/privacy-statement","popup_link_new_window":1,"popup_position":null,"popup_language":"en","better_support_for_screen_readers":0,"reload_page":0,"domain":"","popup_eu_only_js":0,"cookie_lifetime":"100","disagree_do_not_show_popup":0},"urlIsAjaxTrusted":{"\/6.0\/tasks\/deploy-docker-compose.html":true},"dataLayer":{"languages":{"en":{"language":"en","name":"English","native":"English","direction":0,"enabled":1,"plurals":0,"formula":"","domain":"","prefix":"","weight":0,"javascript":""}}}});</script>
+<link rel="stylesheet" type="text/css" href="./Deploying using Docker Compose _ Alfresco Documentation_files/prettify.css"><script async="" src="./Deploying using Docker Compose _ Alfresco Documentation_files/modules.77cc7001be7f09ce805b.js" charset="utf-8"></script><style type="text/css">iframe#_hjRemoteVarsFrame {display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;}</style><script charset="utf-8" src="./Deploying using Docker Compose _ Alfresco Documentation_files/button.d941c9a422e2e3faf474b82a1f39e936.js"></script></head>
+<body class="html not-front not-logged-in one-sidebar sidebar-first page-node page-node- page-node-2220767 node-type-documentation-page eu-cookie-compliance-processed">
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-W4HV22" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0];var j=d.createElement(s);var dl=l!='dataLayer'?'&l='+l:'';j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;j.type='text/javascript';j.async=true;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-W4HV22');</script>
+<!-- End Google Tag Manager -->
+<div id="horizontal-scroll">
+  <div id="skip-link">
+    <a href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <header id="navbar" role="banner" class="navbar navbar-default">
+  <div class="container">
+    <!--<div class="no-padding-horizantal  navbar-header">-->
+    <div class="main-nav">
+      <a class="main-nav__logo" href="https://docs.alfresco.com/" title="Home">
+         <img class="img-responsive" src="./Deploying using Docker Compose _ Alfresco Documentation_files/logo.png" alt="Home">
+      </a>
+      <a class="main-nav__try-alfresco" href="https://www.alfresco.com/try-alfresco">Try Alfresco Enterprise</a>
+      <div class="main-nav__search hidden-xs">
+          <div class="region region-navigation">
+    <section id="block-search-form" class="block block-search clearfix">
+
+      
+  <form class="form-search content-search form-search content-search" action="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html" method="post" id="search-block-form" accept-charset="UTF-8"><div><div>
+      <h2 class="element-invisible">Search form</h2>
+    <input title="Search..." placeholder="Search..." class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128"><button class="element-invisible element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-IhvQtqcvrlIBp46vIB-8Huh4VJnpDPT_NovGzhfggr4">
+<input type="hidden" name="form_id" value="search_block_form">
+</div>
+</div></form>
+</section> <!-- /.block -->
+  </div>
+       </div><!--block-->
+    </div>
+    <!--
+    <div class="visible-xs header-right navbar-btn pull-right col-md-pull-right col-xs-12 col-sm-6 col-md-6">
+    </div>
+    
+    -->
+  </div>
+  <nav class="heading main-menu visible-xs">
+    <div class="container">
+      <div class="row">
+                <div class="col-xs-4 action-mobile-nav">
+          <a href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html#">Menu</a>
+        </div>
+               <!--block-->
+                  <div class="pull-right col-xs-8">
+            <div class="region region-navigation">
+      <div class="region region-navigation">
+    <section id="block-search-form" class="block block-search clearfix">
+
+      
+  <form class="form-search content-search form-search content-search" action="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html" method="post" id="search-block-form" accept-charset="UTF-8"><div><div>
+      <h2 class="element-invisible">Search form</h2>
+    <input title="Search..." placeholder="Search..." class="form-control form-text" type="text" id="edit-search-block-form--2" name="search_block_form" value="" size="15" maxlength="128"><button class="element-invisible element-invisible btn btn-primary form-submit" id="edit-submit" name="op" value="Search" type="submit">Search</button>
+<input type="hidden" name="form_build_id" value="form-IhvQtqcvrlIBp46vIB-8Huh4VJnpDPT_NovGzhfggr4">
+<input type="hidden" name="form_id" value="search_block_form">
+</div>
+</div></form>
+</section> <!-- /.block -->
+  </div>
+  </div>
+          </div>
+         
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="main-container container">
+  <header role="banner" id="page-header">
+    
+      </header> <!-- /#header -->
+
+  <div class="row">
+          <aside style="padding:15px" class="col-sm-4 col-md-3 book-container" role="complementary">
+          <div class="region region-sidebar-first book-nav">
+    <section id="block-book-navigation" class="block block-book clearfix">
+
+      
+  <ul class="menu nav"><li class="first leaf"><a href="https://docs.alfresco.com/6.0/references/whats-new.html">What's new in Alfresco Content Services</a></li>
+<li class="leaf"><a href="https://docs.alfresco.com/6.0/concepts/supported-platforms-ACS.html">Supported Platforms</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/topics/alfresco-video-tutorials.html">Video tutorials</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/master-using-intro.html">Using Alfresco Share</a></li>
+<li class="expanded active-trail dropdown-submenu"><a href="https://docs.alfresco.com/6.0/concepts/master-deploy.html" class="active-trail dropdown-toggle" data-target="#">Deploying </a><ul class="dropdown-menu"><li class="first expanded active-trail dropdown-submenu"><a href="https://docs.alfresco.com/6.0/concepts/deploy-overview.html" class="active-trail dropdown-toggle" data-target="#">Understanding containerized deployment </a><ul class="dropdown-menu"><li class="first leaf"><a href="https://docs.alfresco.com/6.0/concepts/deploy-concepts.html">Deployment concepts</a></li>
+<li class="leaf"><a href="https://docs.alfresco.com/6.0/concepts/public-docker-images.html">Public Alfresco Docker images</a></li>
+<li class="leaf"><a href="https://docs.alfresco.com/6.0/concepts/deploy-prereqs.html">Deployment prerequisites</a></li>
+<li class="leaf"><a href="https://docs.alfresco.com/6.0/tasks/deploy-helm-minikube.html">Deploying with Helm charts using Minikube</a></li>
+<li class="last expanded active-trail dropdown-submenu active"><a href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html" class="active-trail dropdown-toggle active" data-target="#">Deploying using Docker Compose</a><ul class="dropdown-menu"><li class="first last leaf"><a href="https://docs.alfresco.com/6.0/tasks/docker-system-startup.html">Checking system start up</a></li>
+</ul></li>
+</ul></li>
+<li class="leaf"><a href="https://docs.alfresco.com/6.0/tasks/deploy-helm-aws.html">Deploying Alfresco Content Services with Helm charts on AWS</a></li>
+<li class="last collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-install.html">Installing using distribution zip </a></li>
+</ul></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-upgrade.html">Upgrading</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-configuration.html">Configuring</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-administering.html">Administering</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/dev-for-developers.html">Developer guide</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-troubleshoot.html">Troubleshooting</a></li>
+<li class="collapsed"><a href="https://docs.alfresco.com/6.0/concepts/ch-reference.html">Reference</a></li>
+<li class="last collapsed"><a href="https://docs.alfresco.com/6.0/reuse/copyright.html">Copyright</a></li>
+</ul>
+</section> <!-- /.block -->
+  </div>
+      </aside>  <!-- /#sidebar-first -->
+    
+    <section class="col-sm-8 col-md-9 book-content" style="padding:20px">
+            <h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="https://docs.alfresco.com/6.0/concepts/welcome.html">Alfresco Content Services 6.0.1</a> » <a href="https://docs.alfresco.com/6.0/concepts/master-deploy.html">Deploying </a> » <a href="https://docs.alfresco.com/6.0/concepts/deploy-overview.html">Understanding containerized deployment </a></div>      <a id="main-content"></a>
+                    <h1 class="page-header">
+          Deploying using Docker Compose        </h1>
+                                            <div class="region region-content">
+    <section id="block-system-main" class="block block-system clearfix">
+
+      
+  <div id="node-2220767" class="node node-documentation-page node-promoted clearfix" about="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html" typeof="sioc:Item foaf:Document">
+
+  
+      <span property="dc:title" content="Deploying using Docker Compose" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+  
+  <div class="content">
+    <span class="print-link"></span><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded">
+<div class="body taskbody"><div class="abstract"><span class="shortdesc">Use this information to quickly start up <span class="ph">Alfresco Content Services</span> using Docker Compose. This
+      deployment method is only supported for development and test environments.</span>
+</div>
+
+    <div class="section prereq p">
+      <p class="p">To deploy <span class="ph">Alfresco Content Services</span> using
+          <samp class="ph codeph">docker-compose</samp>, download and install <a class="xref" href="https://docs.docker.com/install/" target="_blank">Docker</a>, then
+        follow the steps below.</p>
+
+      <div class="p">
+        <div class="note note"><span class="notetitle">Note:</span> Make sure that the following ports are free on your computer: 5432, 8080, 8082, 8083.
+          These ports are set in the <samp class="ph codeph">docker-compose.yml</samp> file.</div>
+
+      </div>
+
+    </div>
+ 
+    <ol class="ol steps"><li class="li step">
+        <span class="ph cmd">Clone the project locally, change directory to the project folder, and switch to the
+          release branch:</span>
+        <p class="info"> 
+          </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pln">git clone https</span><span class="pun">:</span><span class="com">//github.com/Alfresco/acs-deployment.git</span><span class="pln">
+cd acs</span><span class="pun">-</span><span class="pln">deployment
+git checkout support</span><span class="pun">/</span><span class="pln">HF</span><span class="pun">/</span><span class="lit">1.0</span></pre>
+
+        
+        <p class="stepxmp"> In this example, the branch <samp class="ph codeph">support/HF/1.0</samp> contains to the latest
+            <span class="ph">Alfresco Content Services</span>
+          <span class="ph">6.0.1</span>
+          release.</p>
+        <p class="info"> You can replace the branch name with a release tag that corresponds to specific
+          version of <span class="ph">Alfresco Content Services</span>. See <a class="xref" href="https://github.com/Alfresco/acs-deployment/releases" target="_blank">Alfresco Content Service deployment - Releases</a> for a list of
+          releases.</p>
+        <p class="info"> You can skip the <samp class="ph codeph">git checkout</samp> command to deploy <span class="ph">Alfresco Content Services</span> using the
+            <samp class="ph codeph">latest</samp> images. By doing this, you'll access the latest (and possibly
+          unreleased) components, such as release candidates (i.e. <samp class="ph codeph">-RC</samp>).</p>
+        <p class="info"> Alternatively, you can use the following link to view or download the project source
+          code (as a zip file):</p>
+        <p class="info"> 
+          </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pln">https</span><span class="pun">:</span><span class="com">//github.com/Alfresco/acs-deployment/tree/support/HF/1.0</span></pre>
+
+        
+      </li>
+<li class="li step"><span class="ph cmd">Change directory to the <samp class="ph codeph">docker-compose</samp> folder:</span>
+        <p class="info"> </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pln">cd docker</span><span class="pun">-</span><span class="pln">compose</span></pre>
+</li>
+<li class="li step" id="deploy-docker-compose__up">
+        <span class="ph cmd">Deploy <span class="ph">Alfresco Content Services</span>, including
+          the repository, Share, Postgres database, and Search Services:</span>
+        <p class="info"> 
+          </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pln">docker</span><span class="pun">-</span><span class="pln">compose up</span></pre>
+
+        
+        <p class="info"> This downloads the images, fetches all the dependencies, creates each container, and
+          then starts the system: </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="typ">Creating</span><span class="pln"> network </span><span class="str">"docker-compose_default"</span><span class="pln"> </span><span class="kwd">with</span><span class="pln"> the </span><span class="kwd">default</span><span class="pln"> driver
+</span><span class="pun">...</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_alfresco</span><span class="pun">-</span><span class="pln">pdf</span><span class="pun">-</span><span class="pln">renderer_1 </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_solr6_1                 </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_postgres_1              </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_imagemagick_1           </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_libreoffice_1           </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_share_1                 </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Creating</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_alfresco_1              </span><span class="pun">...</span><span class="pln"> </span><span class="kwd">done</span><span class="pln">
+</span><span class="typ">Attaching</span><span class="pln"> to docker</span><span class="pun">-</span><span class="pln">compose_postgres_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_solr6_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_alfresco</span><span class="pun">-</span><span class="pln">pdf</span><span class="pun">-</span><span class="pln">renderer_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_imagemagick_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_alfresco_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_libreoffice_1</span><span class="pun">,</span><span class="pln"> docker</span><span class="pun">-</span><span class="pln">compose_share_1
+</span><span class="pun">...</span></pre>
+
+        
+        
+        <p class="info"> As an alternative, you can also start the containers in the background by running
+            <samp class="ph codeph">docker-compose up -d</samp>.</p>
+      </li>
+<li class="li step">
+        <span class="ph cmd">Wait for the logs to complete, showing message:</span>
+        <p class="info"> 
+          </p><pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pun">...</span><span class="pln">
+alfresco_1 </span><span class="pun">|</span><span class="pln"> </span><span class="lit">2018</span><span class="pun">-</span><span class="lit">08</span><span class="pun">-</span><span class="lit">28</span><span class="pln"> </span><span class="lit">08</span><span class="pun">:</span><span class="lit">40</span><span class="pun">:</span><span class="lit">30</span><span class="pun">,</span><span class="lit">386</span><span class="pln">  INFO  </span><span class="pun">[</span><span class="pln">management</span><span class="pun">.</span><span class="pln">subsystems</span><span class="pun">.</span><span class="typ">ChildApplicationContextFactory</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">http</span><span class="pun">-</span><span class="pln">nio</span><span class="pun">-</span><span class="lit">8080</span><span class="pun">-</span><span class="kwd">exec</span><span class="pun">-</span><span class="lit">10</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Starting</span><span class="pln"> </span><span class="str">'Transformers'</span><span class="pln"> subsystem</span><span class="pun">,</span><span class="pln"> ID</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="typ">Transformers</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">default</span><span class="pun">]</span><span class="pln">
+alfresco_1 </span><span class="pun">|</span><span class="pln"> </span><span class="lit">2018</span><span class="pun">-</span><span class="lit">08</span><span class="pun">-</span><span class="lit">28</span><span class="pln"> </span><span class="lit">08</span><span class="pun">:</span><span class="lit">40</span><span class="pun">:</span><span class="lit">30</span><span class="pun">,</span><span class="lit">661</span><span class="pln">  INFO  </span><span class="pun">[</span><span class="pln">management</span><span class="pun">.</span><span class="pln">subsystems</span><span class="pun">.</span><span class="typ">ChildApplicationContextFactory</span><span class="pun">]</span><span class="pln"> </span><span class="pun">[</span><span class="pln">http</span><span class="pun">-</span><span class="pln">nio</span><span class="pun">-</span><span class="lit">8080</span><span class="pun">-</span><span class="kwd">exec</span><span class="pun">-</span><span class="lit">10</span><span class="pun">]</span><span class="pln"> </span><span class="typ">Startup</span><span class="pln"> </span><span class="kwd">of</span><span class="pln"> </span><span class="str">'Transformers'</span><span class="pln"> subsystem</span><span class="pun">,</span><span class="pln"> ID</span><span class="pun">:</span><span class="pln"> </span><span class="pun">[</span><span class="typ">Transformers</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">default</span><span class="pun">]</span><span class="pln"> complete</span></pre>
+
+        
+        <p class="info"> If you encounter errors whilst the system is starting up: </p><ul class="ul"><li class="li">Stop the session (by using <samp class="ph codeph">CONTROL+C</samp>).</li>
+
+          <li class="li">Remove the containers (using the <samp class="ph codeph">--rmi all</samp> option):
+              <pre class="pre codeblock prettyprint prettyprinted" style=""><span class="pln">docker</span><span class="pun">-</span><span class="pln">compose down </span><span class="pun">--</span><span class="pln">rmi all</span></pre>
+</li>
+
+            <li class="li">Try allocating more memory resources, as advised in
+                <samp class="ph codeph">docker-compose.yml</samp>. For example, in Docker, change the memory
+              setting in <span class="ph uicontrol">Preferences</span> (or <span class="ph uicontrol">Settings</span>)
+              &gt; <span class="ph uicontrol">Advanced</span> &gt; <span class="ph uicontrol">Memory</span>, to at least 6
+              GB. Make sure you restart Docker and wait for the process to finish before continuing. </li>
+
+            <li class="li">Go back to step <a class="xref" href="https://docs.alfresco.com/6.0/tasks/deploy-docker-compose.html#deploy-docker-compose__up">3</a> (above) to start the deployment again. </li>
+
+          </ul><div class="note note"><span class="notetitle">Note:</span> Although 16 GB is the required minimum memory setting, keep in mind that 6 GB
+            is much lower than the required minimum, and may need to be adapted for your
+            environment.</div>
+
+      </li>
+<li class="li step">
+        <span class="ph cmd">Open your browser and check everything starts up correctly:</span>
+        <p class="info"> 
+          </p><ul class="ul"><li class="li">Share: <samp class="ph codeph">http://localhost:8080/share</samp>
+            </li>
+
+            <li class="li">REST APIs and administration: <samp class="ph codeph">http://localhost:8082/alfresco</samp>
+            </li>
+
+            <li class="li">Search administration: <samp class="ph codeph">http://localhost:8083/solr</samp></li>
+
+          </ul></li>
+<li class="li step">
+        <span class="ph cmd">Log in as the <samp class="ph codeph">admin</samp> user. Enter the default administrator password
+            <samp class="ph codeph">admin</samp>.</span>
+        <p class="info"> </p>
+      </li>
+</ol><div class="section postreq">
+      <p class="p">You can use a number of commands to check that the system started correctly. See <a class="xref" href="https://docs.alfresco.com/6.0/tasks/docker-system-startup.html" title="Use this information to verify that the system started correctly, and to clean up the deployment.">Checking system start up</a> for more. </p>
+
+      <p class="p"></p>
+
+      <p class="p">
+        See the <a class="xref" href="https://github.com/Alfresco/acs-deployment/tree/support/HF/1.0" target="_blank">Alfresco/acs-deployment</a> GitHub project documentation for the prerequisites and
+        detailed setup: <a class="xref" href="https://github.com/Alfresco/acs-deployment/blob/support/HF/1.0/docs/docker-compose-deployment.md" target="_blank">Deploying using Docker Compose</a></p>
+
+      <p class="p">In this project, you can use the <samp class="ph codeph">docker-compose.yml</samp>
+        file following the documentation for standard installations, or <a class="xref" href="https://github.com/Alfresco/acs-deployment/blob/support/HF/1.0/docs/customising-deployment.md" target="_blank">customize the file</a> to apply settings as appropriate
+        to your specific deployment environment.</p>
+
+      <p class="p"></p>
+
+      
+      
+    </div>
+
+  </div>
+
+<div class="related-links">
+<ul class="ullinks"><li class="link ulchildlink"><strong><a href="https://docs.alfresco.com/6.0/tasks/docker-system-startup.html">Checking system start up</a></strong>
+Use this information to verify that the system started correctly, and to clean up the       deployment.</li>
+</ul><div class="familylinks">
+<div class="parentlink"><strong>Parent topic:</strong> <a class="link" href="https://docs.alfresco.com/6.0/concepts/deploy-overview.html" title="Use the following links to help you understand what containerized deployment is, and the deployment options available for Alfresco Content Services.">Understanding containerized deployment</a></div>
+</div>
+</div>
+</div></div></div><div class="field field-name-field-show-feedback field-type-list-boolean field-label-hidden"><div class="field-items"><div class="field-item even"></div></div></div>  </div>
+
+  <ul class="links list-inline"><li class="book_printer first last"><a href="https://docs.alfresco.com/print/book/export/html/2220767" title="Display a printer-friendly version of this page." class="print-page" rel="nofollow">Display a printer-friendly version of this page</a></li>
+</ul>
+  
+</div>
+
+    <div id="wufoo-z7x3p9" class="wufoo-frame"><iframe title="Embedded Wufoo Form" id="wufooFormz7x3p9" class="wufoo-form-container" height="361" allowtransparency="true" frameborder="0" scrolling="no" style="width:100%;border:none" src="./Deploying using Docker Compose _ Alfresco Documentation_files/deploy-docker-compose.html"><a href="https://alfresco.wufoo.com/forms/z7x3p9/" title="html form">Fill out my Wufoo form!</a></iframe></div>
+
+<script type="text/javascript">jQuery('.codeblock').addClass("prettyprint")</script>
+
+
+</section> <!-- /.block -->
+  </div>
+
+    </section>
+
+        <footer class="col-sm-8 col-md-9 book-content" style="padding:20px">
+      <hr>
+      <p class="copyright">© 2019 Alfresco Software, Inc. All Rights Reserved.  &nbsp;&nbsp;<a href="http://www.alfresco.com/terms-use">Legal</a> | <a href="http://www.alfresco.com/privacy">Privacy</a> | <a href="http://www.alfresco.com/">alfresco.com</a>
+      
+
+
+      <span id="twitter-icon">
+
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" style="position: static; visibility: visible; width: 139px; height: 20px;" title="Twitter Follow Button" src="./Deploying using Docker Compose _ Alfresco Documentation_files/follow_button.2d991e3dfc9abb2549972ce8b64c5d85.en.html" data-screen-name="alfrescodocs"></iframe>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script> 
+
+      </span>
+
+      </p>
+
+       
+
+    </footer></div>
+
+  </div>
+</div><script type="text/javascript" id="">(function(a,b,c,d,e){a=b.createElement(c);b=b.getElementsByTagName(c)[0];a.async=1;a.id=e;a.src=("https:"==document.location.protocol?"https://":"http://")+d;b.parentNode.insertBefore(a,b)})(window,document,"script","scripts.demandbase.com/tgRGNEYN.min.js","demandbase_js_lib");var gtm_pageHostnameTLD=google_tag_manager["GTM-W4HV22"].macro(50);document.cookie="isDemadBaseAlreadySet\x3dtrue;Expires\x3d;Domain\x3d"+gtm_pageHostnameTLD+";Path\x3d/";</script>
+
+
+<script type="text/javascript" id="">var utm_source=google_tag_manager["GTM-W4HV22"].macro(62),utm_medium=google_tag_manager["GTM-W4HV22"].macro(74),utm_campaign=google_tag_manager["GTM-W4HV22"].macro(78),utm_content=google_tag_manager["GTM-W4HV22"].macro(82),utm_term=google_tag_manager["GTM-W4HV22"].macro(86),gtm_gclid=google_tag_manager["GTM-W4HV22"].macro(87),gtm_dclid=google_tag_manager["GTM-W4HV22"].macro(88),gtm_salesplay=google_tag_manager["GTM-W4HV22"].macro(92),utm_campaignCookie=google_tag_manager["GTM-W4HV22"].macro(93),salesplayCookie=google_tag_manager["GTM-W4HV22"].macro(94),namesCookieParameters={utm_campaign:utm_campaignCookie,salesplay:salesplayCookie},gtm_referralHostname=google_tag_manager["GTM-W4HV22"].macro(95),gtm_gaClientIDCookie=google_tag_manager["GTM-W4HV22"].macro(97),
+utmParametersCookies={gtm_referralHostname:gtm_referralHostname,utm_source:utm_source,utm_medium:utm_medium,utm_campaign:utm_campaign,utm_content:utm_content,utm_term:utm_term,gtm_gclid:gtm_gclid,gtm_dclid:gtm_dclid,CID:gtm_gaClientIDCookie,salesplay:gtm_salesplay},gtm_cookieExpires=google_tag_manager["GTM-W4HV22"].macro(98);
+function gtm_setCookie(b,a,d){var c="",e=google_tag_manager["GTM-W4HV22"].macro(100),f=/(^|.+\.)(alfresco\.(com|net|org|dev)|activiti\.org|pantheonsite\.io|jiveon\.com|lndo\.site|dyndns\.org|localhost|drupal|dev|local|localhost|([0-9]{1,3}\.){3}[0-9]{1,3}|getsatisfaction\.com|googleweblight\.com|list-manage[1-2]?\.com|list-manage2\.com|campaign-archive\.com)$/i;d&&(c=new Date,c.setTime(c.getTime()+864E5*d),c="; expires\x3d"+c.toGMTString());"referralHostname"===b&&!0===f.test(a)&&(a=void 0);b&&a&&(a=encodeURIComponent(a),
+document.cookie=b+"\x3d"+a+c+"; domain\x3d"+e+"; path\x3d/")}
+function gtm_calculateTrafficSource(){utm_source="alfresco";utm_medium="direct";if(gtm_gclid||gtm_dclid)utm_source="google",utm_medium="ppc";else if(gtm_referralHostname){utm_medium="referral";utm_source=gtm_referralHostname;for(var b=["google","bing"],a=0;a<b.length;a++)if(-1<gtm_referralHostname.indexOf(b[a])){utm_medium="organicsearch";utm_source=b[a];break}b=["facebook.com","twitter.com","linkedin.com"];a=b.indexOf(gtm_referralHostname);if(-1<a)for(utm_medium="organicsocial",a=0;a<b.length;a++)if(gtm_referralHostname===
+b[a])switch(gtm_referralHostname){case "facebook.com":case "l.facebook.com":case "m.facebook.com":utm_source="facebook";break;case "twitter.com":case "t.co":utm_source="twitter";break;case "linked.com":utm_source="linked";break;default:utm_source=b[a]}}return{utm_source:utm_source,utm_medium:utm_medium}}
+(function(){var b=gtm_calculateTrafficSource(),a="undefined"===typeof b.utm_source?"direct":b.utm_source;b="undefined"===typeof b.utm_medium?"none":b.utm_medium;var d=["utm_campaign","salesplay"];if("referral"!==b||"alfresco.com"!==a&&"activiti.org"!==a&&"docs.alfresco.com"!==a&&"community.alfresco.com"!==a)gtm_setCookie("utm_source",a,gtm_cookieExpires),gtm_setCookie("utm_medium",b,gtm_cookieExpires);for(var c in utmParametersCookies)void 0!==utmParametersCookies[c]?gtm_setCookie(c,utmParametersCookies[c],
+gtm_cookieExpires):0<=d.indexOf(c)&&void 0!==namesCookieParameters[c]&&gtm_setCookie(c,"NULL",gtm_cookieExpires)})();</script>
+  <script>var eu_cookie_compliance_cookie_name = "";</script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/eu_cookie_compliance.js"></script>
+<script src="./Deploying using Docker Compose _ Alfresco Documentation_files/bootstrap.js"></script>
+
+
+
+<div id="sliding-popup" class="sliding-popup-bottom" style="height: auto; width: 100%; bottom: 0px;"><div>
+  <div class="popup-content info">
+    <div id="popup-text">
+      <h2>We use cookies on our websites to enhance your web experience.</h2><p>By using this site, you are agreeing with Alfresco Cookie Policy. We'll assume that you are happy to receive all cookies on this website. However, you can change your cookie settings at any time.</p>    </div>
+    <div id="popup-buttons">
+      <button type="button" class="agree-button">OK, I agree</button>
+              <button type="button" class="find-more-button find-more-button-processed">Find out more</button>
+          </div>
+  </div>
+</div></div><iframe scrolling="no" frameborder="0" allowtransparency="true" src="./Deploying using Docker Compose _ Alfresco Documentation_files/widget_iframe.2d991e3dfc9abb2549972ce8b64c5d85.html" title="Twitter settings iframe" style="display: none;"></iframe><iframe name="_hjRemoteVarsFrame" title="_hjRemoteVarsFrame" id="_hjRemoteVarsFrame" src="./Deploying using Docker Compose _ Alfresco Documentation_files/box-74dcf4e32eff343c96838bf3a780ac1d.html" style="display: none !important; width: 1px !important; height: 1px !important; opacity: 0 !important; pointer-events: none !important;"></iframe><img style="display:none" alt="" aria-hidden="true" id="db_bw_pixel_ad" src="./Deploying using Docker Compose _ Alfresco Documentation_files/demandbase"></body></html>
