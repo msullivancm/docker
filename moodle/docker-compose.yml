@@ -30,3 +30,4 @@ volumes:
     driver: local
   moodle_data:
     driver: local
+
