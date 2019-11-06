@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2019-11-06T14:14:07Z</date>
+    <groups>
+        <group>
+            <name>Discovered hosts</name>
+        </group>
+        <group>
+            <name>Linux servers</name>
+        </group>
+        <group>
+            <name>Printers</name>
+        </group>
+        <group>
+            <name>Templates/Operating systems</name>
+        </group>
+        <group>
+            <name>Zabbix servers</name>
+        </group>
+    </groups>
+    <hosts>
+        <host>
+            <host>DC-01</host>
+            <name>DC-01</name>
+            <templates>
+                <template>
+                    <name>Template OS Linux by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Discovered hosts</name>
+                </group>
+                <group>
+                    <name>Linux servers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.249.2</ip>
+                    <dns>dc-01.emp.com.br</dns>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>dc-01.emp.com.br</host>
+            <name>dc-01</name>
+            <templates>
+                <template>
+                    <name>Template OS Windows by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Operating systems</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.249.2</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>dc.dominio.com.br</host>
+            <name>dc</name>
+            <templates>
+                <template>
+                    <name>Template OS Windows by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Operating systems</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.249.130</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>isaque.emp.com.br</host>
+            <name>isaque</name>
+            <templates>
+                <template>
+                    <name>Template OS Windows by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Operating systems</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.254.200</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>note-9009</host>
+            <name>note-9009</name>
+            <templates>
+                <template>
+                    <name>Template OS Linux by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Discovered hosts</name>
+                </group>
+                <group>
+                    <name>Linux servers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.240.110</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>Samsung M4080FX</host>
+            <name>Samsung M4080FX</name>
+            <templates>
+                <template>
+                    <name>Template_Snmp_Impressora_LLD_VERSAO-0.2</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Printers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <type>SNMP</type>
+                    <ip>192.168.243.3</ip>
+                    <port>161</port>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>Samsung M4580FX</host>
+            <name>Samsung M4580FX</name>
+            <templates>
+                <template>
+                    <name>Template_Snmp_Impressora_LLD_VERSAO-0.2</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Printers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <type>SNMP</type>
+                    <ip>192.168.243.6</ip>
+                    <port>161</port>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>storage.emp.com.br</host>
+            <name>storage</name>
+            <templates>
+                <template>
+                    <name>Template OS Windows by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Templates/Operating systems</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.249.6</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>vmhost-03</host>
+            <name>vmhost-03</name>
+            <templates>
+                <template>
+                    <name>Template OS Linux by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Discovered hosts</name>
+                </group>
+                <group>
+                    <name>Linux servers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.249.13</ip>
+                    <dns>vmhost-03.emp.com.br</dns>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>vmhost-03.emp.com.br</host>
+            <name>vmhost-03</name>
+            <templates>
+                <template>
+                    <name>Template OS Linux by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Linux servers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <ip>192.168.240.100</ip>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+                <interface>
+                    <type>SNMP</type>
+                    <ip>192.168.240.100</ip>
+                    <port>161</port>
+                    <interface_ref>if2</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>xerox-ti-pb-01</host>
+            <name>xerox-ti-pb-01</name>
+            <templates>
+                <template>
+                    <name>Template_Snmp_Impressora_LLD_VERSAO-0.2</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Printers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <type>SNMP</type>
+                    <ip>192.168.243.2</ip>
+                    <port>161</port>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>XeroxWorkCentre5335Corredor</host>
+            <name>XeroxWorkCentre5335Corredor</name>
+            <templates>
+                <template>
+                    <name>Template_Snmp_Impressora_LLD_VERSAO-0.2</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Printers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <type>SNMP</type>
+                    <ip>192.168.243.1</ip>
+                    <port>161</port>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+        <host>
+            <host>Zabbix server</host>
+            <name>Zabbix server</name>
+            <templates>
+                <template>
+                    <name>Template App Zabbix Server</name>
+                </template>
+                <template>
+                    <name>Template OS Linux by Zabbix agent</name>
+                </template>
+            </templates>
+            <groups>
+                <group>
+                    <name>Zabbix servers</name>
+                </group>
+            </groups>
+            <interfaces>
+                <interface>
+                    <interface_ref>if1</interface_ref>
+                </interface>
+            </interfaces>
+            <applications>
+                <application>
+                    <name>BradokWeb</name>
+                </application>
+                <application>
+                    <name>Web</name>
+                </application>
+            </applications>
+            <httptests>
+                <httptest>
+                    <name>Bradok</name>
+                    <application>
+                        <name>BradokWeb</name>
+                    </application>
+                    <agent>Mozilla/5.0 (Windows NT 6.1; WOW64; rv:33.0) Gecko/20100101 Firefox/33.0</agent>
+                    <steps>
+                        <step>
+                            <name>Bradok</name>
+                            <url>http://www.bradok.com.br</url>
+                            <follow_redirects>NO</follow_redirects>
+                            <status_codes>200</status_codes>
+                        </step>
+                    </steps>
+                </httptest>
+            </httptests>
+            <inventory_mode>DISABLED</inventory_mode>
+        </host>
+    </hosts>
+</zabbix_export>
